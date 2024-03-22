@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Italtel events</title>
+  <link rel="icon" href="assets\logo_italtel-colore.png">
+  <meta charset="utf-8" />
+  <meta charset="ascii" />
+  <link rel="stylesheet" type="text/css" href="styles\loginStyle.css" />
+  <script defer src="scripts\loginScript.js" type="module"></script>
+</head>
+
+<body>
+  <a id="backarrow-login" href="index.html"><input type="image" src="assets\backArrow.svg" width="50px"></a>
+  <h1>Login</h1>
+  <form id="form-login">
+    <div>
+      <label for="username_login">Username</label>
+      <input id="username_login" name="email" type="text" placeholder="..." required />
+    </div>
+    <div>
+      <label for="password_login">Password</label>
+      <input id="password_login" name="password" type="password" placeholder="..." required />
+      <span  id="error-login" style="color: red;" hidden>credenziali sbagliate</span>
+    </div>
+    <input id="login-button" type="submit" value="Accedi" />
+  </form>
+
+</body>
+
+</html>

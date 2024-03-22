@@ -1,0 +1,160 @@
+html,body{
+    width: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    margin-bottom: 5vh;
+}
+
+h1{
+    font-size: 3vw;
+    background: -webkit-linear-gradient(#04FF4A,#0CA7FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.title-container-index{
+    width: 55%;
+    display: flex;
+    margin-top: 3vh;
+    background-color: #0CA7FF;
+    color:white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 12px 12px #c8dff8;
+    align-items: center;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleOpened{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title-container-index:hover{
+    background-color: #239ce2;
+    cursor: pointer;
+}
+
+#number{
+    font-size: 1.8vw;
+}
+
+.content{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5vw;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    cursor: text;
+}
+
+.contentOpened{
+    white-space: normal;
+    background-color: white;
+    width: 90%;
+    color: black;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px gray;
+}
+
+
+#remove-button{
+    width: fit-content;
+    height: fit-content;
+    font-size: 2vw;
+    color: white;
+    background-color: red;
+    border-radius: 100%;
+    align-self: flex-start;
+}
+
+#remove-button{
+    cursor: pointer;
+}
+
+#remove-button:hover{
+    background-color: rgb(200, 0, 0);
+}
+
+.readButton{
+    background-color: rgb(144, 216, 255);
+    border: solid;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-color: white;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    box-shadow: 3px 3px rgb(89, 149, 182);
+}
+.readButton:hover{
+    background-color: rgb(34, 112, 255);
+}
+.readButton:active { 
+    transform: scale(0.98); 
+    background-color: rgb(94, 150, 255);
+} 
+
+#backarrow_list{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2% 0px 0px 2%;
+    width: 3%;
+}
+#backarrow_list input{
+    width: 100%;
+}
+
+#hideButton{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: rgb(255, 100, 100);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600.0;
+    box-shadow: 2px 2px 4px gray;
+    text-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+#hideButton:active { 
+    transform: scale(0.95); 
+    background-color: rgb(217, 217, 218);
+} 
+
+@media screen and (max-width: 980px) {
+    h1{font-size: 5vw;}
+    .title-container-index{width: 85%;}
+    #number{font-size: 2.5vw;}
+    .content{font-size: 3vw;}
+    #extendedContent{font-size: 3vw;}
+    #remove-button{font-size: 3.5vw;}
+}
+
+@media screen and (max-width: 980px) {
+    #backarrow_list{
+        width: 5%;
+        margin: 5% 0px 0px 5%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #backarrow_list{
+        width: 10%;
+    }
+}

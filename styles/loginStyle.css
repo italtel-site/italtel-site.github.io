@@ -1,0 +1,123 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+}
+h1{
+    font-size: 3rem;
+    background: -webkit-linear-gradient(#04FF4A,#0CA7FF);
+    margin-top: 5vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#backarrow-login{
+    align-self: flex-start;
+    margin: 2% 0px 0px 2%;
+    width: 3%;
+}
+
+#backarrow-login input{
+    width: 100%;
+}
+
+
+form{
+    margin-top: 30px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #69adff;
+    box-shadow: 20px 18px #bdd4ee;
+    border-radius: 14px;
+    color: white;
+    padding: 40px;
+    border-radius: 2;
+    gap: 30px;
+    justify-self: center;
+    margin-top:auto ;
+    margin-bottom: auto;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+form div label{
+    margin-bottom: 4px;
+}
+
+
+#username_login, #password_login{
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 4px;
+    border-color: #9AC1F0;
+    background-color: #fffbdb;
+    font-size: 20px;
+}
+
+#login-button{
+    border-radius: 15px;
+    margin: 10% 14% 0 14%;
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #B2FBA5;
+    border-width: 4px;
+    border-color: #73b667;
+    font-weight: 600;
+    color: #3C5934;
+    box-shadow: 8px 8px #b8fca669;
+}
+
+#login-button:hover{
+    background-color: #c9ffbf;
+    border-color: #8fcf83;
+}
+
+#error-login{
+    margin-top: 10px;
+    font-size: 20px;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+}
+
+@media screen and (max-width: 980px) {
+    
+    form{
+        width: 65%;
+    }
+    label{
+        font-size: 2rem;
+    }
+    #username-login, #password-login{
+        font-size: 2rem;
+    }
+    #error-login{
+        font-size: 2rem;
+    }
+    #login-button{
+        font-size: 2rem;
+    }
+    #backarrow-login{
+        width: 5%;
+        margin: 5% 0px 0px 5%;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+    form{
+        width: 72.5%;
+    }
+    #backarrow-login{
+        width: 10%;
+    }
+}

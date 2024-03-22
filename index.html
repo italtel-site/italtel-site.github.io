@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Italtel events</title>
+  <link rel="icon" href="assets\logo_italtel-colore.png">
+  <meta charset="utf-8" />
+  <meta charset="ascii" />
+  <link rel="stylesheet" type="text/css" href="styles\indexStyle.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Suez+One&display=swap');
+  </style>
+</head>
+
+<body>
+  <div id="navbar-index">
+    <img id="italtel-img" src="assets\Italtel-Logo.png" alt="Italtel-Logo">
+    <a id="login-button" href="/login.html"><img src="assets\user.svg" alt="Login button" width="40rem" /></a>
+  </div>
+  <div id="title-container-index">
+    <h3>IIS Alessandrini Mainardi - Vittuone (MI)</h3>
+    <h4>ORIENTAMENTO CLASSI IV ITIS</h4>
+    <h5>26/03/2024</h5>
+  </div>
+  <div id="question-section"><a class="container-button" href="/question.html"><button class="send-button">SOTTOPONI LA
+        TUA DOMANDA</button></a>
+    <p>nessun dato personale sarà condiviso, la domanda verrà utilizzata solo nel contesto dell’incontro e poi verrà
+      cancellata</p>
+  </div>
+  <script>
+    function isMobile() {
+      const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      return regex.test(navigator.userAgent);
+    }
+    if (isMobile()) {
+      document.querySelector('#login-button').remove()
+    }
+    if (screen.orientation.type === "landscape-primary" && isMobile()) {
+      document.querySelector('#italtel-img').setAttribute("hidden", "")
+    }
+    screen.orientation.addEventListener("change", (e) => {
+      if (screen.orientation.type === "landscape-primary" && isMobile()) {
+        document.querySelector('#italtel-img').setAttribute("hidden", "")
+      }
+      else if (screen.orientation.type === "portrait-primary" && isMobile()) {
+        document.querySelector('#italtel-img').removeAttribute("hidden", "")
+      }
+    });
+  </script>
+
+</html>

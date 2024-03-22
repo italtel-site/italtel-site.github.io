@@ -1,0 +1,219 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    z-index: 90;
+}
+
+#backarrow_question {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2% 0px 0px 2%;
+    width: 3%;
+}
+
+#backarrow_question input {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5vw;
+    background: -webkit-linear-gradient(#04FF4A, #0CA7FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+#input-text-question {
+    width: 32.5%;
+    height: 50%;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 1.5em;
+    border-radius: 12px;
+    border-width: 6px;
+    border-color: #69adff;
+    background-color: rgb(255, 255, 235);
+    box-shadow: 12px 12px #c8dff8;
+    resize: none;
+}
+
+#input-text-question:focus {
+    outline: none;
+}
+
+#send-button {
+    width: 30%;
+    background-color: #69adff;
+    border-radius: 15px;
+    border: 0;
+    padding: 20px;
+    color: white;
+    margin: 0;
+    font-size: 2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    box-shadow: 10px 10px #c8dff8;
+}
+
+#send-button:hover {
+    background-color: #5992d6;
+}
+
+#send-button:active {
+    transform: scale(0.95);
+    background-color: rgb(123, 173, 233);
+}
+
+#input-text-question::-webkit-scrollbar {
+    width: 0.25em;
+}
+
+#input-text-question::-webkit-scrollbar-track {
+    background: rgb(223, 223, 200);
+}
+
+#input-text-question::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 12px;
+}
+
+.confirm-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    z-index: -20;
+}
+
+#confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #69adff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 4px solid;
+    color: white;
+    text-shadow: 2px 2px 3px rgb(59, 59, 59);
+    border-color: rgb(152, 207, 243);
+    border-color: white;
+    box-shadow: 0px 0px 6px gray;
+    padding: 20px;
+}
+
+.open {
+    opacity: 1;
+    z-index: 30;
+}
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+.hourglass {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+#confirm-container img {
+    width: 80px;
+}
+
+#confirm-container p {
+    font-size: 1.5vw;
+}
+
+
+@media screen and (max-width: 1220px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    #input-text-question {
+        width: 45%;
+    }
+
+    #send-button {
+        font-size: 2.5vw;
+        width: 45%;
+    }
+
+    #confirm-container p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    #input-text-question {
+        width: 75%;
+        font-size: 5vw;
+    }
+
+    #send-button {
+        font-size: 5vw;
+        width: 65%;
+    }
+
+    #confirm-container p {
+        font-size: 3.5vw;
+    }
+
+}
+
+
+@media screen and (max-width: 980px) {
+    #backarrow_question {
+        width: 5%;
+        margin: 5% 0px 0px 5%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #backarrow_question {
+        width: 10%;
+    }
+}
+
+

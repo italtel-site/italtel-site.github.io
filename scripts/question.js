@@ -120,6 +120,8 @@ async function blackList(ip) {
             await updateDoc(docRef, {
                 blocked: false,
             });
+            q = await query(collection(db, "blacklist"), where('user', '==', ip))
+            querySnapshot = await getDocs(q);
         }
         return querySnapshot.docs[0]
     }

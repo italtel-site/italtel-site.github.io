@@ -69,7 +69,7 @@ async function send() {
         resultUI.querySelector('img').src = "assets/wrong-icon.svg"
 
         resultUI.classList.add("open")
-        setTimeout(() => resultUI.classList.remove("open"), 750)
+        setTimeout(() => resultUI.classList.remove("open"), 1500)
     }
 }
 

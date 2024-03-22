@@ -108,8 +108,8 @@ async function getIpAddress() {
 }
 
 async function blackList(ip) {
-    const q = await query(collection(db, "blacklist"), where('user', '==', ip))
-    const querySnapshot = await getDocs(q);
+    let q = await query(collection(db, "blacklist"), where('user', '==', ip))
+    let querySnapshot = await getDocs(q);
     if (querySnapshot.docs[0] == undefined) {
         return { blocked: false, id: null, count: 0 }
     }

@@ -31,8 +31,11 @@ async function getQuestion() {
     newDiv.classList.add("title-container-index")
     newDiv.setAttribute("id", "divID" + index)
 
-    const hours = new Date(doc.data().timestamp.toDate()).toLocaleTimeString().split(":")
-    const time = hours[0] + ":" + hours[1]
+    const date = new Date(doc.data().timestamp.toDate())
+    const hours = date.toLocaleTimeString().split(":")
+    const day = date.toLocaleString().split(',')[0].split('/')
+
+    const time = day[0] + "/" + day[1] + "&nbsp&nbsp" + hours[0] + ":" + hours[1]
     number.innerHTML = time
     number.setAttribute("id", "number")
 
